@@ -54,4 +54,23 @@ var app = angular
         );
       }
     ]);
-    document.write('<script type="text/javascript" src="js/userController.js"></script>'); 
+    var compareTo = function() {
+      return {
+        require: "ngModel",
+        scope: {
+          otherModelValue: "=compareTo"
+        },
+        link: function(scope, element, attributes, ngModel) {
+          ngModel.$validators.compareTo = function(modelValue) {
+            return modelValue == scope.otherModelValue;
+          };
+
+          scope.$watch("otherModelValue", function() {
+            ngModel.$validate();
+          });
+        }
+      };
+    };
+    app.directive("compareTo", compareTo);
+    document.write('<script type="text/javascript" src="js/UserService.js"></script>');  
+    document.write('<script type="text/javascript" src="js/userController.js"></script>');
