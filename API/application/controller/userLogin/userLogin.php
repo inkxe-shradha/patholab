@@ -40,6 +40,7 @@ class UserLogin extends Controller
             
             if(($userModel->userSignUp($username,$email,$userId,$password)) === true){
                 $result['status'] = 'success';
+                $result['userId'] = $userId;
                 $result['message'] = 'Data Inserted successfully';
             }else{
                 $result['status']  = 'Failed';

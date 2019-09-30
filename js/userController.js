@@ -11,10 +11,12 @@ angular.module('patholab').controller("UserController", ["$scope","$rootScope","
       rePassword: "",
       email: ""
     };
+     $scope.signinWarning = false;
     $scope.userLoader = false;
     $scope.init = function(){
-       
+       var userid;
     };
+    $scope.errorshow = false;
     var count = 0;
     $rootScope.$watch("online", function(newStatus) {
       if (newStatus == false) {
@@ -84,7 +86,25 @@ angular.module('patholab').controller("UserController", ["$scope","$rootScope","
         $scope.userLoader = true;
         UserService.signUpUser(user).then(function(pRes){
             $scope.userLoader = false;
-            console.log(pRes);
+            if(pRes.data.status == 'success')
+            {
+              $scope.signInVisible();
+              $scope.signinWarning = true;
+              userid = pRes.data.userId; 
+            }else if (pRes.data.status == "Failed") {
+              var message = 'User details already exit';
+              errorShowFunction(message,'alert-danger',3000);
+            }
         });
     };
+    
+    var errorShowFunction = function(messs,errClass,timer) {
+      $scope.errorshow = true;
+      $scope.errorClass = errClass;
+      $scope.errorMessage = messs;
+      $timeout(function(){
+         $scope.errorshow = false;
+      },timer);
+
+    }; 
 }]);
