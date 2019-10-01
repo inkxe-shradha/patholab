@@ -1,12 +1,15 @@
 <?php
 class UserLogin extends Controller
 {
+    private  $userModel ;
     function __construct()
 	{
 		# code...
         parent::__construct();
         $this->isLoginSessionExpired();
-	}
+        $this->userModel =  $this->loadmodel('userModel');
+    }
+    
     public function index()
     {
         echo "Index Loaded";
@@ -17,8 +20,25 @@ class UserLogin extends Controller
         $result = [];
         $email = $_REQUEST['email'];
         $password = $_REQUEST['password'];
+        $userId = $_REQUEST['userId'];
+        $apiKey = $_REQUEST['apikey'];
+        if($this->checkApiKey($apiKey))
+        {
+            $checkLogin = $this->userModel->userSign($email,$password,$userId);
+            if($checkLogin != 'Invalid_password' && $checkLogin != 'Invalid_username')
+            {
+                $result['status'] = "success";
+                $result['data']  = $checkLogin;
+                $this->setSessionStorage($checkLogin['userName'],$checkLogin['userId']);
+            }else{
+                $result['status'] = 'Failed';
+                $result['message'] = 'Invalid Username Or Password';
+            }
+        }else{
+           $result['message'] = "Api key mismatched";
+        }
         
-        
+        echo json_encode($result);
     }
 
     public function signUp()
@@ -35,16 +55,15 @@ class UserLogin extends Controller
         $userId = rand($min, $max);
         if($this->checkApiKey($apiKey))
         {
-            $userModel = $this->loadmodel('userModel');
             $password = password_hash($password, PASSWORD_DEFAULT);
             
-            if(($userModel->userSignUp($username,$email,$userId,$password)) === true){
+            if(($this->userModel->userSignUp($username,$email,$userId,$password)) === true){
                 $result['status'] = 'success';
                 $result['userId'] = $userId;
                 $result['message'] = 'Data Inserted successfully';
             }else{
                 $result['status']  = 'Failed';
-                $result['message'] =  $userModel->userSignUp($username,$email,$userId,$password);
+                $result['message'] =  $this->userModel->userSignUp($username,$email,$userId,$password);
                
             }
 
@@ -94,6 +113,15 @@ class UserLogin extends Controller
             return true;
         }else{
             return false;
+        }
+    }
+    
+    private function setSessionStorage($username,$userId)
+    {
+        if($username  != '' && $userId != '')
+        {
+            $_SESSION['user_name'] = $username;
+            $_SESSION['user_id'] = $userId;
         }
     }
 }

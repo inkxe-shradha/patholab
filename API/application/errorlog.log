@@ -4479,3 +4479,18 @@ Stack trace:
 [25-Sep-2019 05:51:49 Europe/Berlin] PHP Notice:  Undefined index: status in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 45
 [25-Sep-2019 05:52:39 Europe/Berlin] PHP Notice:  Undefined index: status in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 45
 [25-Sep-2019 05:53:10 Europe/Berlin] PHP Notice:  Undefined index: status in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 45
+[01-Oct-2019 19:08:51 Europe/Berlin] PHP Notice:  Undefined variable: apiKey in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 24
+[01-Oct-2019 19:10:02 Europe/Berlin] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\model\userModel.php on line 38
+[01-Oct-2019 19:10:02 Europe/Berlin] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\model\userModel.php on line 38
+[01-Oct-2019 19:10:02 Europe/Berlin] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\model\userModel.php on line 38
+[01-Oct-2019 19:11:36 Europe/Berlin] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\model\userModel.php on line 38
+[01-Oct-2019 19:13:58 Europe/Berlin] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\model\userModel.php on line 39
+[01-Oct-2019 19:20:30 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 32
+[01-Oct-2019 19:28:05 Europe/Berlin] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 34
+[01-Oct-2019 19:28:29 Europe/Berlin] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 34
+[01-Oct-2019 19:33:11 Europe/Berlin] PHP Warning:  Illegal string offset 'userName' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 32
+[01-Oct-2019 19:33:11 Europe/Berlin] PHP Warning:  Illegal string offset 'userId' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 32
+[01-Oct-2019 19:34:04 Europe/Berlin] PHP Warning:  Illegal string offset 'userName' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 33
+[01-Oct-2019 19:34:04 Europe/Berlin] PHP Warning:  Illegal string offset 'userId' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 33
+[01-Oct-2019 19:35:54 Europe/Berlin] PHP Warning:  Illegal string offset 'userName' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 32
+[01-Oct-2019 19:35:54 Europe/Berlin] PHP Warning:  Illegal string offset 'userId' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 32
