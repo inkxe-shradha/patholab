@@ -1,4 +1,4 @@
-angular.module('patholab').controller("UserController", ["$scope", "$rootScope", "$http", "$interval", "$location", "$routeParams", "$timeout", "UserService", function($scope, $rootScope, $http, $interval, $location, $routeParams, $timeout, UserService) {
+angular.module('patholab').controller("UserController", ["$scope", "$rootScope", "$http", "$interval", "$location", "$routeParams", "$timeout", "UserService","UserModule", function($scope, $rootScope, $http, $interval, $location, $routeParams, $timeout, UserService,UserModule) {
     $scope.userDetails = {
         username: '',
         password: '',
@@ -47,7 +47,8 @@ angular.module('patholab').controller("UserController", ["$scope", "$rootScope",
                 $scope.useSignInLoader = false;
                 if(pRes.data.status == "success")
                 {
-                    console.log('Success');
+                    $location.path('/dashBoard');
+                    UserModule.setUserDetails(pRes.data);
                 }else{
                     $scope.timoutClass = 'alert-danger';
                     $scope.toolOnline = true;

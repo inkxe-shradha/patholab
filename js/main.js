@@ -21,6 +21,11 @@ var app = angular
                 controller: "UserController",
                 reloadOnSearch: false
               })
+              .when("/dashBoard", {
+                templateUrl: "dashboard.html",
+                controller: "DashBoardController",
+                reloadOnSearch: false
+              })
 
               .otherwise({
                 templateUrl: "404.html"
@@ -72,5 +77,12 @@ var app = angular
       };
     };
     app.directive("compareTo", compareTo);
+
+    //Used the User Module
+    document.write('<script type="text/javascript" src="js/UserModule.js"></script>');
     document.write('<script type="text/javascript" src="js/UserService.js"></script>');  
     document.write('<script type="text/javascript" src="js/userController.js"></script>');
+
+    //Used the Dashboard Module
+    document.write('<script type="text/javascript" src="js/DashBoardService.js"></script>');  
+    document.write('<script type="text/javascript" src="js/dashBoardController.js"></script>');
