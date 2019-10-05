@@ -1,6 +1,6 @@
 app.factory('UserService', ["$http", "$rootScope", function($http, $rootScope) {
-    var rootUrl = "http://patholab.doctor.com/API/",
-        Key = "APKEYRBDUFFUE2786287GFEWFFQUFQG38847KK09BCM",
+    var rootUrl = $rootScope.rootUrl,
+        Key = $rootScope.Key,
         userLogIn = function(userDetails,userid) {
             var _serializedData = $.param({
                 apikey: Key,

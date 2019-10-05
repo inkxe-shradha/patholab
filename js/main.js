@@ -61,6 +61,8 @@ var app = angular
           },
           false
         );
+         $rootScope.rootUrl = "http://patholab.doctor.com/API/";
+         $rootScope.Key = "APKEYRBDUFFUE2786287GFEWFFQUFQG38847KK09BCM";
       }
     ]);
     var compareTo = function() {

@@ -15,6 +15,7 @@ angular.module('patholab').controller("UserController", ["$scope", "$rootScope",
     $scope.userLoader = false;
     var userid;
     $scope.init = function() {
+       
        checkLoginSession();
        if ($routeParams.param == "false") {
             $scope.timoutClass = 'alert-danger';
@@ -25,7 +26,7 @@ angular.module('patholab').controller("UserController", ["$scope", "$rootScope",
     $scope.errorshow = false;
     var count = 0;
     $scope.useSignInLoader = false;
-
+    
     $rootScope.$watch("online", function(newStatus) {
         if (newStatus == false) {
             $scope.toolOnline = true;
@@ -134,7 +135,7 @@ angular.module('patholab').controller("UserController", ["$scope", "$rootScope",
             if(pRes.data && pRes.data.status == "success")
             {
                 $location.path('/dashBoard');
-                UserModule.setUserDetails(pRes.data);
+                UserModule.setUserDetails(pRes.data.data);
             }else if(pRes.data.status == "Expired"){
                 $scope.signInVisible();
                 $scope.timoutClass = 'alert-danger';
