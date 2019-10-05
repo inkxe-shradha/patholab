@@ -4494,3 +4494,13 @@ Stack trace:
 [01-Oct-2019 19:34:04 Europe/Berlin] PHP Warning:  Illegal string offset 'userId' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 33
 [01-Oct-2019 19:35:54 Europe/Berlin] PHP Warning:  Illegal string offset 'userName' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 32
 [01-Oct-2019 19:35:54 Europe/Berlin] PHP Warning:  Illegal string offset 'userId' in C:\xampp\tmp\htdocs\index\Patho_lab\API\application\controller\userLogin\userLogin.php on line 32
+[05-Oct-2019 16:11:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method UserLogin::checkLogInStatus() from context '' in C:\xampp\tmp\htdocs\index\Patho_lab\API\router\router.php:36
+Stack trace:
+#0 [internal function]: {closure}('checkLogInStatu...')
+#1 C:\xampp\tmp\htdocs\index\Patho_lab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\tmp\htdocs\index\Patho_lab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#3 C:\xampp\tmp\htdocs\index\Patho_lab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#4 C:\xampp\tmp\htdocs\index\Patho_lab\API\router\router.php(64): Inkxe\Router\Router->run()
+#5 C:\xampp\tmp\htdocs\index\Patho_lab\API\index.php(13): require('C:\\xampp\\tmp\\ht...')
+#6 {main}
+  thrown in C:\xampp\tmp\htdocs\index\Patho_lab\API\router\router.php on line 36

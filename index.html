@@ -61,6 +61,7 @@
         opacity: 0
       }
     }
+    .activeclass:before{background:#2196f3;border-radius:50%;content:\"\";display:block;height:8px;left:-4px;position:absolute;top:calc(50% - 4px);width:8px}
   </style>
   <link href="style.css" rel="stylesheet">
   <script>
@@ -69,15 +70,7 @@
 </head>
 
 <body class="app" ng-app="patholab">
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
-  <script type="75131236ab121e1e95c55791-text/javascript">window.addEventListener('load', () => {
-        const loader = document.getElementById('loader');
-        setTimeout(() => {
-          loader.classList.add('fadeOut');
-        }, 300);
-      });</script>
+  
   <ng-view></ng-view>
   
   <script type="75131236ab121e1e95c55791-text/javascript" src="vendor.js"></script>

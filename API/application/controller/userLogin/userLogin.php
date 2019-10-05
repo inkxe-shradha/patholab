@@ -77,7 +77,7 @@ class UserLogin extends Controller
 
     private function checkLogInStatus()
     {
-        if($this->isLoginSessionExpired() == false && isset($_SESSION['user_id']) && $_SESSION['user_id'] != '')
+        if($this->isLoginSessionExpired() == 'false' && isset($_SESSION['user_id']) && $_SESSION['user_id'] != '')
         {
             return true;
         }
@@ -86,7 +86,7 @@ class UserLogin extends Controller
         }
     }
 
-    public function isLoginSessionExpired() {
+    private function isLoginSessionExpired() {
 
         $login_session_duration = 3600; 
 
@@ -96,13 +96,13 @@ class UserLogin extends Controller
 
             if(((time() - $_SESSION['loggedin_time']) > $login_session_duration)){ 
 
-                return true; 
+                return 'true'; 
 
             } 
 
         }
 
-        return false;
+        return 'false';
 
     }
 
@@ -122,6 +122,31 @@ class UserLogin extends Controller
         {
             $_SESSION['user_name'] = $username;
             $_SESSION['user_id'] = $userId;
+            $_SESSION['loggedin_time'] = time();
         }
+    }
+
+    public function checkSessionStatus()
+    {
+        $result = [];
+        if(isset($_REQUEST['apikey']) && $this->checkApiKey($_REQUEST['apikey']) && isset($_SESSION['user_id']) && $_SESSION['user_id'] != '' )
+        {
+            // echo $this->isLoginSessionExpired();exit();
+            if($this->checkLogInStatus())
+            {
+                $result['status'] = 'success';
+                $result['data'] = array(
+                    'userId' => $_SESSION['user_id'],
+                    'userName' => $_SESSION['user_name']
+                );
+            }else{
+                $result['status'] = 'Expired';
+                $result['message'] = 'Session Expired';
+            }
+        }else{
+            $result['status'] = 'Failed';
+            $result['message'] = 'Api key Or Data mismatched';
+        }
+        echo json_encode($result);
     }
 }

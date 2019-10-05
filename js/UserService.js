@@ -36,9 +36,26 @@ app.factory('UserService', ["$http", "$rootScope", function($http, $rootScope) {
                 data: _serializedData
             });
             return _response;
+        },
+        checkLoginSession = function()
+        {
+            var _serializedData = $.param({
+                apikey: Key,
+            });
+
+            var _response = $http({
+                method: "POST",
+                url: rootUrl + "userLogin/checkSessionStatus",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                data: _serializedData
+            });
+            return _response;
         };
     return {
         userLogIn: userLogIn,
-        signUpUser: signUpUser
+        signUpUser: signUpUser,
+        checkLoginSession:checkLoginSession
     };
 }]);

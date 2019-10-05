@@ -15,7 +15,12 @@ angular.module('patholab').controller("UserController", ["$scope", "$rootScope",
     $scope.userLoader = false;
     var userid;
     $scope.init = function() {
-       
+       checkLoginSession();
+       if ($routeParams.param == "false") {
+            $scope.timoutClass = 'alert-danger';
+            $scope.toolOnline = true;
+            $scope.timeoutWarning = 'Your Session is Expired .Please Login Again To continue.';
+      }
     };
     $scope.errorshow = false;
     var count = 0;
@@ -121,5 +126,24 @@ angular.module('patholab').controller("UserController", ["$scope", "$rootScope",
             $scope.errorshow = false;
         }, timer);
 
+    };
+
+    var checkLoginSession = function()
+    {
+        UserService.checkLoginSession().then(function(pRes){
+            if(pRes.data && pRes.data.status == "success")
+            {
+                $location.path('/dashBoard');
+                UserModule.setUserDetails(pRes.data);
+            }else if(pRes.data.status == "Expired"){
+                $scope.signInVisible();
+                $scope.timoutClass = 'alert-danger';
+                $scope.toolOnline = true;
+                $scope.timeoutWarning = 'Your Session is Expired .Please Login Again To continue.';
+                $timeout(function() {
+                    $scope.toolOnline = false;
+                }, 3000);
+            }
+        });
     };
 }]);

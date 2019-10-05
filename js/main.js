@@ -26,6 +26,10 @@ var app = angular
                 controller: "DashBoardController",
                 reloadOnSearch: false
               })
+              .when("/:param1", {
+                templateUrl: "signin.html",
+                controller: "UserController",
+              })
 
               .otherwise({
                 templateUrl: "404.html"
