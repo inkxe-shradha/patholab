@@ -92,3 +92,7 @@ var app = angular
     //Used the Dashboard Module
     document.write('<script type="text/javascript" src="js/DashBoardService.js"></script>');  
     document.write('<script type="text/javascript" src="js/dashBoardController.js"></script>');
+
+     //Used the Addtext report Module
+    document.write('<script type="text/javascript" src="js/AddTextReportController.js"></script>');  
+    // document.write('<script type="text/javascript" src="js/dashBoardController.js"></script>');
