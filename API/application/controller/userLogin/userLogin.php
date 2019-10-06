@@ -92,7 +92,6 @@ class UserLogin extends Controller
                 return 'true';
             }
         }
-
         return 'false';
     }
 
@@ -118,7 +117,6 @@ class UserLogin extends Controller
     {
         $result = [];
         if (isset($_REQUEST['apikey']) && $this->checkApiKey($_REQUEST['apikey']) && isset($_SESSION['user_id']) && $_SESSION['user_id'] != '') {
-            // echo $this->isLoginSessionExpired();exit();
             if ($this->checkLogInStatus()) {
                 $result['status'] = 'success';
                 $result['data'] = array(
@@ -128,6 +126,7 @@ class UserLogin extends Controller
             } else {
                 $result['status'] = 'Expired';
                 $result['message'] = 'Session Expired';
+                session_destroy();
             }
         } else {
             $result['status'] = 'Failed';
