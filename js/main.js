@@ -94,5 +94,7 @@ var app = angular
     document.write('<script type="text/javascript" src="js/dashBoardController.js"></script>');
 
      //Used the Addtext report Module
-    document.write('<script type="text/javascript" src="js/AddTextReportController.js"></script>');  
+    document.write('<script type="text/javascript" src="js/AddTextReportModule.js"></script>'); 
+    document.write('<script type="text/javascript" src="js/AddTextReportService.js"></script>');  
+    document.write('<script type="text/javascript" src="js/AddTextReportController.js"></script>'); 
     // document.write('<script type="text/javascript" src="js/dashBoardController.js"></script>');

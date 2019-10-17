@@ -41,6 +41,46 @@ class Controller
         
     }
 
+    private function isLoginSessionExpired()
+    {
+
+        $login_session_duration = 3600;
+
+        $current_time = time();
+
+        if (isset($_SESSION['loggedin_time']) and isset($_SESSION["user_id"])) {
+
+            if (((time() - $_SESSION['loggedin_time']) > $login_session_duration)) {
+
+                return 'true';
+            }
+        }
+        return 'false';
+    }
+
+   private function checkLogInStatus()
+    {
+        if ($this->isLoginSessionExpired() == 'false' && isset($_SESSION['user_id']) && $_SESSION['user_id'] != '') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function getLoginStatus()
+    {
+        return $this->checkLogInStatus();
+    }
+
+    public function checkApiKey($key)
+    {
+        if ($key === "APKEYRBDUFFUE2786287GFEWFFQUFQG38847KK09BCM") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * Load the model with the given name.
      * loadModel("SongModel") would include models/songmodel.php and create the object in the controller, like this:

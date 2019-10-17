@@ -4504,3 +4504,137 @@ Stack trace:
 #5 C:\xampp\tmp\htdocs\index\Patho_lab\API\index.php(13): require('C:\\xampp\\tmp\\ht...')
 #6 {main}
   thrown in C:\xampp\tmp\htdocs\index\Patho_lab\API\router\router.php on line 36
+[17-Oct-2019 18:46:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TextReport::isLoginSessionExpired() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:9
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 9
+[17-Oct-2019 18:47:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method Controller::isLoginSessionExpired() from context 'TextReport' in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:9
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 9
+[17-Oct-2019 18:47:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method Controller::isLoginSessionExpired() from context 'TextReport' in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:9
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 9
+[17-Oct-2019 18:48:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method Controller::isLoginSessionExpired() from context 'TextReport' in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:9
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 9
+[17-Oct-2019 18:50:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method Controller::isLoginSessionExpired() from context 'TextReport' in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:9
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 9
+[17-Oct-2019 18:51:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 18:53:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 18:55:10 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 18:57:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 18:59:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 19:01:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 19:03:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 19:05:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 19:07:09 Europe/Berlin] PHP Fatal error:  Access level to UserLogin::isLoginSessionExpired() must be public (as in class Controller) in C:\xampp\htdocs\index\patholab\API\application\controller\userLogin\userLogin.php on line 153
+[17-Oct-2019 19:09:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to private method Controller::checkLogInStatus() from context 'TextReport' in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:9
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 9
+[17-Oct-2019 19:10:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function checkLogInStatus() in C:\xampp\htdocs\index\patholab\API\application\lib\controller.php:72
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php(9): Controller->getLoginStatus()
+#1 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#2 [internal function]: {closure}('getallRecord')
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#6 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#7 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\lib\controller.php on line 72
+[17-Oct-2019 19:10:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function checkLogInStatus() in C:\xampp\htdocs\index\patholab\API\application\lib\controller.php:72
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php(9): Controller->getLoginStatus()
+#1 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#2 [internal function]: {closure}('getallRecord')
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#6 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#7 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\lib\controller.php on line 72
+[17-Oct-2019 19:11:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function checkLogInStatus() in C:\xampp\htdocs\index\patholab\API\application\lib\controller.php:72
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php(9): Controller->getLoginStatus()
+#1 C:\xampp\htdocs\index\patholab\API\router\router.php(78): TextReport->__construct()
+#2 [internal function]: {closure}('getallRecord')
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#6 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#7 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\lib\controller.php on line 72
+[17-Oct-2019 19:14:12 Europe/Berlin] PHP Notice:  Undefined index: APKEYRBDUFFUE2786287GFEWFFQUFQG38847KK09BCM in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 15
+[17-Oct-2019 19:22:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Testmodel::getAllTextReport() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:17
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(79): TextReport->getallRecord()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 17
+[17-Oct-2019 19:23:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Testmodel::getAllTextReport() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:17
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(79): TextReport->getallRecord()
+#1 [internal function]: {closure}('getallRecord')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 17

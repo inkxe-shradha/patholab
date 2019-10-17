@@ -1,13 +1,13 @@
 <div ng-init="init()" ng-controller="AddTextReportController">
-    <div id="loader" ng-show="dashBoardLoader">
+    <div id="loader" ng-show="addtextLoader">
         <div class="spinner"></div>
     </div>
     <main class="main-content bgc-grey-100">
         <div id="mainContent">
-            <div class="row gap-20 masonry pos-r">
+            <div class="row gap-20 masonry pos-r" ng-show="isAddTextReportClicked">
                 <div class="masonry-item col-md-12">
                     <div class="bgc-white p-20 bd">
-                        <h6 class="c-grey-900">Complex Form Layout</h6>
+                        <h6 class="c-grey-900">Add Text Report</h6>
                         <div class="mT-30">
                             <form>
                                 <div class="form-row">
