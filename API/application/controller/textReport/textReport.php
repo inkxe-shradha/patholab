@@ -90,4 +90,25 @@ class TextReport extends Controller
         }
          echo json_encode($result);
     }
+    
+    public function deletePatient()
+    {
+        $result = [];
+        if($this->isUserLogIn && $this->checkApiKey($_REQUEST['apiKey']))
+        {
+            $status = $this->textModel->deletePatientRecord($_REQUEST['patient_id']);
+            if($status == "success")
+            {
+                $result['status'] =  "success";
+            }else{
+                $result['status'] =  "Failed";
+            }
+        }
+        else{
+            $result['status'] = 'Failed';
+            $result['message'] = 'API Credential Failed';
+        }
+        echo json_encode($result);
+
+    }
 }

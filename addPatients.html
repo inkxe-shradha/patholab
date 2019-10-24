@@ -29,6 +29,33 @@
                     </div>
                 </div>
             </div>
+           
+        <!-- The Modal -->
+        <div class="modal fade animated" id="myModal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+        
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title text-danger">Delete Warning</h4>
+                        <button type="button" class="close" ng-click="closeModal()">&times;</button>
+                    </div>
+        
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Are You Sure You want to Delete This Patient Record ?
+                    </div>
+        
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" ng-click="deleteModal()">Ok</button>
+                        <button type="button" class="btn btn-danger" ng-click="closeModal()">Close</button>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        </div>
             <div class="container" ng-show="patientTabelShow">
                 <div class="panel">
                     <div class="panel-heading border">
@@ -58,7 +85,7 @@
                                     <td>{{patient.patient_gender}}</td>
                                     <td>{{patient.address}}</td>
                                     <td>{{patient.created_date}}</td>
-                                    <td><button class="btn btn-sm btn-danger">Delete</button></td>
+                                    <td><button class="btn btn-sm btn-danger" id="deleteID" ng-click="deleteUser(patient.id)">Delete</button></td>
                                 </tr>
                             </tbody>
                         </table>

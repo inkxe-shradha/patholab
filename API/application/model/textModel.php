@@ -60,4 +60,16 @@ class TextModel
           return "Error =>". $this->db->error;
       }
   }
+
+  public function deletePatientRecord($id)
+  {
+      $sql = "DELETE FROM `patient_data` WHERE id = $id";
+      $result = $this->db->query($sql);
+      if($result)
+      {
+          return 'success';
+      }else{
+          return 'error'.$this->db->error;
+      }
+  }
 }

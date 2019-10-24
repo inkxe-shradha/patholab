@@ -16,24 +16,6 @@ app.factory('PatientsService', ["$http", "$rootScope","PatientsModule", function
        },
        sendPatientData = function(patient)
        {
-          // var _serializedData = $.param({
-          //   apikey: key,
-          //   patient_name: patient.pateintName,
-          //   patient_number: patient.patientNumber,
-          //   patient_age: patient.patientAge,
-          //   patient_gender: patient.gender,
-          //   patient_address: patient.address
-          // });
-
-          // var _response = $http({
-          //   method: "POST",
-          //   url: rootUrl + "textReport/setPatientData",
-          //   headers: {
-          //     "Content-Type": "application/x-www-form-urlencoded"
-          //   },
-          //   data: _serializedData
-          // });
-          // return _response;
            var _params = $.param({
             apikey: key,
             patient_name: patient.pateintName,
@@ -51,9 +33,14 @@ app.factory('PatientsService', ["$http", "$rootScope","PatientsModule", function
              data: _params
            });
            return _response;
-       };
+       },
+       deleteRecord = function(id){
+         var _response = $http.get(rootUrl+'textReport/deletePatient?apiKey='+key+'&patient_id='+id);
+         return _response;
+       }; 
        return {
          loadAllTextData: loadAllTextData,
-         sendPatientData: sendPatientData
+         sendPatientData: sendPatientData,
+         deleteRecord: deleteRecord
        };
 }]);

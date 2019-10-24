@@ -4754,3 +4754,4 @@ Stack trace:
 [23-Oct-2019 05:33:56 Europe/Berlin] PHP Warning:  Illegal string offset 'created_date' in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 48
 [23-Oct-2019 05:34:40 Europe/Berlin] PHP Notice:  Undefined index: status in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
 [23-Oct-2019 05:36:12 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[24-Oct-2019 18:57:18 Europe/Berlin] PHP Notice:  Undefined index: apikey in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 97
