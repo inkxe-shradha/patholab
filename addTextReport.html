@@ -4,6 +4,39 @@
     </div>
     <main class="main-content bgc-grey-100">
         <div id="mainContent">
+            <div class="container">
+                <div class="panel">
+                    <div class="panel-heading border">
+                        <h2>Data table using jquery datatable in Angularjs
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable"
+                            ui-options="dataTableOpt">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="n in data">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{n[0]}}</td>
+                                    <td>{{n[1]}}</td>
+                                    <td>{{n[2]}}</td>
+                                    <td>{{n[3]}}</td>
+                                    <td>{{n[4] | date:'dd/MM/yyyy'}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
             <div class="row gap-20 masonry pos-r" ng-show="isAddTextReportClicked">
                 <div class="masonry-item col-md-12">
                     <div class="bgc-white p-20 bd">

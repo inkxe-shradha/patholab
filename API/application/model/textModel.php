@@ -24,11 +24,40 @@ class TextModel
          {
              array_push($attachArray, $row);
          }
-         $attachArray['data'] = true;
        
      }else{
-         $attachArray['data'] = 'false';
+         $attachArray['status'] = 'Failed';
      }
      return $attachArray;
+  }
+
+  public function getallPatientRecords()
+  {
+     $attachArray = [];
+     $sql = "SELECT * FROM `patient_data`";
+    
+     $result = $this->db->query($sql);
+
+     if($result->num_rows > 0)
+     {
+         while($row = $result->fetch_assoc())
+         {
+             array_push($attachArray, $row);
+         }
+       
+     }
+     return $attachArray;
+  }
+
+  public function insertPatientData($patientName,$patientNumber,$PatientAge,$patientGender,$patientAddress)
+  {
+      $sql = "INSERT INTO `patient_data`( `patient_name`, `patient_number`, `patient_age`, `patient_gender`, `address`) VALUES ('$patientName','$patientNumber','$PatientAge','$patientGender','$patientAddress')";
+      $result = $this->db->query($sql);
+      if($result)
+      {
+          return true;
+      }else{    
+          return "Error =>". $this->db->error;
+      }
   }
 }

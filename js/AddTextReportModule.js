@@ -10,10 +10,12 @@ app.factory('AddTextReportModule', ['$rootScope', function($rootScope){
           {
               textLoadedData = data;
               isTextRportLoaded = true;
+             
           }else{
               textLoadedData = '';
               isTextRportLoaded = false;
           }
+          $rootScope.$emit("TEXTDATA_LOADED_EVENT", textLoadedData);
       },
       getTextData = function()
       {

@@ -1,21 +1,37 @@
 angular.module('patholab').controller("DashBoardController", ["$scope", "$rootScope", "$http", "$interval", "$location", "$routeParams", "$timeout", "UserService","UserModule",'DashBoardService', function($scope, $rootScope, $http, $interval, $location, $routeParams, $timeout, UserService,UserModule,DashBoardService) {
     $scope.sideBarArray = [
-        {
-            name: "Dashboard",
-            status: true,
-            current: true,
-            icons: "ti-home",
-            color: "c-blue-500",
-            htmlPage : 'default'
-        },
-        {
-            name: "Add Test Report",
-            status: true,
-            current: false,
-            icons: "ti-bar-chart",
-            color: "c-brown-500",
-            htmlPage : 'addTextReport'
-        },
+      {
+        name: "Dashboard",
+        status: true,
+        current: true,
+        icons: "ti-home",
+        color: "c-blue-500",
+        htmlPage: "default"
+      },
+      {
+        name: "Generate Report",
+        status: true,
+        current: false,
+        icons: "ti-bar-chart",
+        color: "c-brown-500",
+        htmlPage: "addTextReport"
+      },
+      {
+        name: "Add Patients",
+        status: true,
+        current: false,
+        icons: "ti-pencil",
+        color: "c-light-blue-500",
+        htmlPage: "addPatients"
+      },
+      {
+        name: "Add Report",
+        status: true,
+        current: false,
+        icons: "ti-share",
+        color: "c-deep-orange-500",
+        htmlPage: "addReport"
+      }
     ];
     var count = 0;
     $scope.module = $scope.sideBarArray[0];

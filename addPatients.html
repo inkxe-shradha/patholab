@@ -1,0 +1,132 @@
+<div ng-init="init()" ng-controller="PatientsController">
+    <div id="loader" ng-show="patientsLoader">
+        <div class="spinner"></div>
+    </div>
+    <main class="main-content bgc-grey-100">
+        <div id="mainContent">
+            <div class="loading" ng-show="patientFormLoader">Loading&#8230;</div>
+            <div class="container">
+                <div class="row m-5">
+                    <div class="col-6  text-left" ng-show="patientTabelShow">
+                        <button class="btn btn-primary btn-sm  m-5" ng-click="addPatientsForm()">Add Patients</button>
+                    </div>
+
+                    <div class="col-6  text-right" ng-show="patientTabelShow">
+                        <button class="btn cur-p btn-outline-dark btn-sm m-5" ng-click="refreshTabel()">Refresh</button>
+                    </div>
+
+                    <div class="col-12  text-right" ng-show="!patientTabelShow">
+                        <button class="btn btn-dark btn-sm  m-5" ng-click="backToTable()">Back</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" ng-show="isAlertError">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-{{alertClasss}}">
+                            {{alertMessage}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" ng-show="patientTabelShow">
+                <div class="panel">
+                    <div class="panel-heading border">
+                        <h2 class="text-center">Patient's Entered List</h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered bordered table-striped table-condensed datatable"
+                            ui-jq="dataTable" ui-options="dataTableOpt">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Number</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Address</th>
+                                    <th>Created Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="patient in patienArray">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{patient.patient_name}}</td>
+                                    <td>{{patient.patient_number}}</td>
+                                    <td>{{patient.patient_age}}</td>
+                                    <td>{{patient.patient_gender}}</td>
+                                    <td>{{patient.address}}</td>
+                                    <td>{{patient.created_date}}</td>
+                                    <td><button class="btn btn-sm btn-danger">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row gap-20 masonry pos-r" ng-show="isPatientClicked">
+                <div class="masonry-item col-md-12">
+                    <div class="bgc-white p-20 bd">
+                        <h6 class="c-grey-900">Add Patient Details</h6>
+                        <div class="mT-30">
+                            <form  name="patientForm" novalidate>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6"><label for="patient_name">Patient 
+                                            Name <span class="text-danger bold">*</span></label><input type="text" class="form-control" ng-model="patientObject.pateintName" id="patient_name"  name="userName" 
+                                            placeholder="Patient Name" required ng-class="patientForm.userName.$error.required && patientForm.userName.$touched && patientForm.userName.$dirty ? 'is-invalid' : ''">
+                                            <span class="text-danger" data-ng-show="patientForm.userName.$error.required && patientForm.userName.$touched && patientForm.userName.$dirty">Patient name is Required!</span>
+                                    </div>
+                                    <div class="form-group col-md-6"><label for="number">Patient Number <span class="text-danger bold">*</span></label></label><input
+                                            type="text" class="form-control" ng-class="(patientForm.userPhoneNumber.$error.minlength || patientForm.userPhoneNumber.$error.maxlength) || patientForm.userPhoneNumber.$error.required && patientForm.userPhoneNumber.$touched && patientForm.userPhoneNumber.$dirty
+                                             ? 'is-invalid' : ''" ng-model="patientObject.patientNumber" id="number" name="userPhoneNumber" 
+                                            placeholder="Enter the phone number" valid-number no-float ng-minlength="10" ng-maxlength="10" required>
+                                             <span class="text-danger" data-ng-show="patientForm.userPhoneNumber.$error.required && patientForm.userPhoneNumber.$touched && patientForm.userPhoneNumber.$dirty">Enter the phone number!</span>
+                                            <span class="text-danger"  data-ng-show="patientForm.userPhoneNumber.$error.minlength || patientForm.userPhoneNumber.$error.maxlength">Phone number must be 10 digit.</span>
+                                        </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-6"><label for="age">Patient Age <span class="text-danger bold">*</span></label></label>
+                                        <input type="text" class="form-control" ng-class="patientForm.patientAge.$error.required && patientForm.patientAge.$touched && patientForm.patientAge.$dirty || patientForm.patientAge.$error.maxlength ? 'is-invalid' : ''" ng-maxlength="3" valid-number no-float name="patientAge" ng-model="patientObject.patientAge" id="age" placeholder="Eg 23" required>
+                                        <span class="text-danger" data-ng-show="patientForm.patientAge.$error.required && patientForm.patientAge.$touched && patientForm.patientAge.$dirty">Age Required!</span>
+                                        <span class="text-danger" data-ng-show="patientForm.patientAge.$error.maxlength">Age Should Be Not be Grater Than 4 digit!</span>
+                                    </div>
+                                    <div class="col-6">
+                                        <div style="margin: 35px 0px 0px 0px ;text-align: center;">
+                                            <div class="custom-control custom-radio custom-control-inline"><b style="font-size: 15px;">Gender <span class="text-danger bold">*</span></label></b></div>
+                                            <!-- Default inline 1-->
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="Male"  ng-model="patientObject.gender" ng-value="true" checked name="Gender" >
+                                                <label class="custom-control-label" for="Male">Male</label>
+                                            </div>
+                                            
+                                            <!-- Default inline 2-->
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="Female" name="Gender" ng-value="false"  ng-model="patientObject.gender" >
+                                                <label class="custom-control-label" for="Female">Female</label>
+                                            </div>
+                                            <span class="text-danger" data-ng-show="patientForm.Gender.$error.required && patientForm.Gender.$touched && patientForm.Gender.$dirty">Please Select the Gender</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12"><label for="address">Address <span class="text-danger bold">*</span></label></label>
+                                        <textarea  class="form-control" for="address" ng-class="patientForm.patientAddress.$error.required && patientForm.patientAddress.$touched && patientForm.patientAddress.$dirty ? 'is-invalid' : ''" name="patientAddress" ng-model="patientObject.address" required placeholder="Enter the  Address"></textarea>
+                                        <span class="text-danger" data-ng-show="patientForm.patientAddress.$error.required && patientForm.patientAddress.$touched && patientForm.patientAddress.$dirty">Please enter the Address</span>
+                                    </div>
+                                </div>
+                                <button  class="btn btn-primary" ng-disabled="patientForm.$invalid && !patientObject.gender" ng-click="savePatientDetails(patientObject)">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright © 2017 Designed by <a
+                href="https://colorlib.com/" target="_blank" title="Colorlib">Colorlib</a>. All rights
+            reserved.</span>
+
+    </footer>
+</div>
+</div>

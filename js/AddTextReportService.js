@@ -1,11 +1,16 @@
-app.factory('AddTextReportService', ["$http", "$rootScope", function($http, $rootScope) {
+app.factory('AddTextReportService', ["$http", "$rootScope","AddTextReportModule", function($http, $rootScope,AddTextReportModule) {
      var rootUrl = $rootScope.rootUrl,
          key = $rootScope.Key,
          loadAllTextData = function()
          {
-            console.log(rootUrl);
-           $http.get(rootUrl+'textReport/getallRecord?apiKey='+key).then(function(data) {
-             console.log(data);
+           $http.get(rootUrl+'textReport/getallRecord?apiKey='+key).then(function(pRes) {
+            if(pRes.data && pRes.data.status == "Failed")
+            {
+              AddTextReportModule.setTextData(pRes.data);
+            }else{
+              var data = [];
+              AddTextReportModule.setTextData(data);
+            }
            }).catch(function(data, status) {
                 console.error("Gists error", data);
            });
