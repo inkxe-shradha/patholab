@@ -4755,3 +4755,15 @@ Stack trace:
 [23-Oct-2019 05:34:40 Europe/Berlin] PHP Notice:  Undefined index: status in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
 [23-Oct-2019 05:36:12 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
 [24-Oct-2019 18:57:18 Europe/Berlin] PHP Notice:  Undefined index: apikey in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 97
+[25-Oct-2019 17:41:06 Europe/Berlin] PHP Notice:  Undefined index: apikey in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 120
+[25-Oct-2019 18:53:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:152
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(79): TextReport->saveTestData()
+#1 [internal function]: {closure}('saveTestData')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 152

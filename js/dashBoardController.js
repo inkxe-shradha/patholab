@@ -48,6 +48,7 @@ angular.module('patholab').controller("DashBoardController", ["$scope", "$rootSc
        setInterval(function(){
           checkSessionStatus();
        },120000);
+       $location.search("param", null);
     };
 
     var checkSessionStatus = function()

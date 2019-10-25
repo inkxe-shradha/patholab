@@ -72,4 +72,46 @@ class TextModel
           return 'error'.$this->db->error;
       }
   }
+
+  public function getAllReportResult()
+  {
+    $attachArray = [];
+    $sql = "SELECT * FROM `report_data`";
+    
+    $result = $this->db->query($sql);
+
+     if($result->num_rows > 0)
+     {
+         while($row = $result->fetch_assoc())
+         {
+             array_push($attachArray, $row);
+         }
+       
+     }
+     return $attachArray;
+  }
+
+  public function saveTestData($reportName,$reportPrice)
+  {
+    $sql = "INSERT INTO `report_data`( `test_name`, `test_price`) VALUES ('$reportName','$reportPrice')";
+    $result = $this->db->query($sql);
+    if($result)
+    {
+        return true;
+    }else{    
+        return "Error =>". $this->db->error;
+    }
+  }
+
+  public function deleteTestData($id)
+  {
+      $sql = "DELETE FROM `report_data` WHERE id = $id ";
+      $result = $this->db->query($sql);
+      if($result)
+      {
+          return 'success';
+      }else{
+          return 'error'.$this->db->error;
+      }
+  }
 }

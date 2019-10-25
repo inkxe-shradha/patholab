@@ -1,0 +1,148 @@
+<div ng-init="init()" ng-controller="AddReportController">
+    <div id="loader" ng-show="reportLoader">
+        <div class="spinner"></div>
+    </div>
+    <main class="main-content bgc-grey-100">
+        <div id="mainContent">
+            <div class="loading" ng-show="testReportFormLoader">Loading&#8230;</div>
+            <div class="container">
+                <div class="row m-5">
+                    <div class="col-6  text-left" ng-show="testReportShow">
+                        <button class="btn btn-primary btn-sm  m-5" ng-click="addPatientsForm()">Add Test Report</button>
+                    </div>
+
+                    <div class="col-6  text-right" ng-show="testReportShow">
+                        <button class="btn cur-p btn-outline-dark btn-sm m-5" ng-click="refreshTabel()">Refresh</button>
+                    </div>
+
+                    <div class="col-12  text-right" ng-show="!testReportShow">
+                        <button class="btn btn-dark btn-sm  m-5" ng-click="backToTable()">Back</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" ng-show="isAlertError" style="position: fixed;
+    z-index: 99999999;
+    top:10%;
+    width: 80%;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-{{alertClasss}}">
+                            {{alertMessage}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        <div class="container" ng-if="testReportShow">
+            <div class="panel">
+                <div class="panel-heading border">
+                    <h2 class="text-center">Test Report Entered List</h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered bordered table-striped table-condensed datatable"
+                        ui-jq="dataTable" ui-options="dataTableOpt">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Test Name</th>
+                                <th>Test Price</th>
+                                <th>Created Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="testReport in testReportArr track by $index">
+                                <td>{{$index+1}}</td>
+                                <td>{{testReport.test_name}}</td>
+                                <td>{{testReport.test_price | currency:"₹":0}}</td>
+                                <td>{{testReport.created_date}}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger" id="deleteID" ng-click="deleteReport(testReport.id)">Delete</button>
+                                    <button class="btn btn-sm btn-success" id="deleteID" ng-click="deleteUser(patient.id)">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- The Modal -->
+            <div class="modal animated" id="deleteModal">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+            
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title text-danger">Delete Warning</h4>
+                            <button type="button" class="close" ng-click="closeModal()">&times;</button>
+                        </div>
+            
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            Are You Sure You want to Delete This Patient Record ?
+                        </div>
+            
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" ng-click="deleteModal()">Ok</button>
+                            <button type="button" class="btn btn-danger" ng-click="closeModal()">Close</button>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gap-20 masonry pos-r" ng-show="isTestReportClicked">
+            <div class="masonry-item col-md-12">
+                <div class="bgc-white p-20 bd">
+                    <h6 class="c-grey-900">Add Test Report</h6>
+                    <div class="mT-30"  id="scollTop">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Test Report Name <font class="text-danger">*</font></th>
+                                        <th scope="col">Price In (₹) <font class="text-danger">*</font></th>
+                                        <th scope="col">Creted Date</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="tblData in addTestReportArry track by $index">
+                                        <th scope="row">{{$index + 1}}</th>
+                                        <td>
+                                            <div class="form-group form-group-default">
+                                                <input type="text" class="form-control" ng-model="tblData.reportName" placeholder="Enter Test Name *">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group form-group-default">
+                                                <input type="text" class="form-control" ng-model="tblData.reportPrice" price placeholder="Enter Test Price *">
+                                            </div>
+                                        </td>
+                                        <td>{{tblData.createdDate}}</td>
+                                        <td><button class="btn btn-sm btn-danger" id="deleteID" ng-click="removeColoum($index)" ng-hide="$index == 0">Remove</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="text-right">
+                                            <button class="btn btn-success btn-sm m-5" ng-click="saveReportData()">Save Report</button>
+                                            <button class="btn btn-info btn-sm pull-right m-5" ng-click="addColum()">Add Test Report</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</main>
+<footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright © 2017 Designed by <a href="https://colorlib.com/"
+            target="_blank" title="Colorlib">Colorlib</a>. All rights
+        reserved.</span>
+
+</footer>
+</div>
+</div>

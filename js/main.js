@@ -375,3 +375,8 @@ var app = angular
     document.write('<script type="text/javascript" src="js/PatientsController.js"></script>'); 
     document.write('<script type="text/javascript" src="js/PatientsService.js"></script>');  
     document.write('<script type="text/javascript" src="js/PatientsModule.js"></script>'); 
+
+    //Used the Addtest Report report Module
+    document.write('<script type="text/javascript" src="js/AddReportModule.js"></script>'); 
+    document.write('<script type="text/javascript" src="js/AddReportService.js"></script>');  
+    document.write('<script type="text/javascript" src="js/AddReportController.js"></script>'); 

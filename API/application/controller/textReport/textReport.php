@@ -111,4 +111,77 @@ class TextReport extends Controller
         echo json_encode($result);
 
     }
+
+    public function getAllReportDetails()
+    {
+        $result = [];
+        $totalArray = [];
+        $arrayData = [];
+        if($this->isUserLogIn && $this->checkApiKey($_REQUEST['apiKey']))
+        {
+            $result = $this->textModel->getAllReportResult();
+            if(empty($result))
+            {
+                $totalArray['data'] = [];
+            }
+            else{
+                foreach ($result as $key => $value) {
+                    # code...
+                    $arrayData[$key]['id'] = $value['id'];
+                    $arrayData[$key]['test_name'] = $value['test_name'];
+                    $arrayData[$key]['test_price'] = $value['test_price'];
+                    $arrayData[$key]['created_date'] = date('d-m-Y', strtotime($value['created_date']));
+                }
+                $totalArray['data'] = $arrayData;
+            }
+            $totalArray['status'] = 'Success';
+        }else{
+            $totalArray['status'] = 'Failed';
+            $totalArray['message'] = 'API Credential Failed';
+        }
+         echo json_encode($totalArray);
+    }
+
+    public function saveTestData(){
+        $result = [];
+        $urlData = [];
+        $status = false;
+        if($this->isUserLogIn && $this->checkApiKey($_REQUEST['apikey']))
+        { 
+            $urlData = json_decode($_REQUEST['test_array']);
+            foreach ($urlData as $key => $value) {
+                $reportName = $value->reportName;
+                $reportPrice = $value->reportPrice;
+                $status = $this->textModel->saveTestData($reportName,$reportPrice);
+            }
+            if($status)
+            {
+                $result['status'] = 'success';
+            }
+        }else{
+            $result['status'] = 'Failed';
+            $result['message'] = 'API Credential Failed';
+        }
+        echo json_encode($result);
+    }
+
+    public function deleteTestData()
+    {
+        $result = [];
+        if($this->isUserLogIn && $this->checkApiKey($_REQUEST['apiKey']))
+        {
+            $status = $this->textModel->deleteTestData($_REQUEST['test_id']);
+            if($status == "success")
+            {
+                $result['status'] =  "success";
+            }else{
+                $result['status'] =  "Failed";
+            }
+        }
+        else{
+            $result['status'] = 'Failed';
+            $result['message'] = 'API Credential Failed';
+        }
+        echo json_encode($result);
+    }
 }
