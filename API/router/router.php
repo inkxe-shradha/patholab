@@ -100,7 +100,7 @@ $router->get('/textReport/(.*)', function ($name) {
     echo 'Parameter 3: ' . $url_parameter_3 . '<br />';
     // /exit(0);*/
     $call = new $controller();
-    $call->$url_controller($url_action);
+    $call->$url_controller($url_action,$url_parameter_1);
 });
 
 

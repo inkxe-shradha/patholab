@@ -149,4 +149,34 @@ class TextModel
       }
       return $row;
   }
+
+  public function getAllReports($id)
+  {
+      $attachArray = [];
+      $sql = "SELECT * FROM `relation_report` WHERE `patient_id` = '$id' ";
+      $result = $this->db->query($sql);
+      if($result->num_rows > 0)
+      {
+        while($row = $result->fetch_assoc())
+        {
+            array_push($attachArray, $row);
+        }
+      }
+      return $attachArray;
+  }
+
+  public function getAllTestReport($id)
+  {
+      $attachArray = [];
+      $sql = "SELECT * FROM `patient_data` WHERE `id` = $id ";
+      $result = $this->db->query($sql);
+      if($result->num_rows > 0)
+      {
+        while($row = $result->fetch_assoc())
+        {
+            array_push($attachArray, $row);
+        }
+      }
+      return $attachArray;
+  }
 }

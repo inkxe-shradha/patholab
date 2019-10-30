@@ -263,10 +263,13 @@ class TextReport extends Controller
         echo json_encode($result);
     }
 
-    public function generatePdf($id)
+    public function generatePdf($apiKey,$id)
     {
-        if($this->isUserLogIn && isset($_REQUEST['apikey']) && $this->checkApiKey($_REQUEST['apikey']))
+        if($this->isUserLogIn && isset($apiKey) && $this->checkApiKey($apiKey))
         {
+            $reportArray = $this->textModel->getAllReports($id);
+            $patientDetails  = $this->textModel->getAllTestReport($id);
+            require 'application/view/generatePdf/index.php';
         }else{
             require 'application/view/warning/index.php';
         }

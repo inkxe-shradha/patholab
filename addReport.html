@@ -59,7 +59,7 @@
                                 <td>4</td>
                                 <td>5</td>
                             </tr>
-                            <tr ng-show="testReportArr.length == 0">
+                            <tr ng-if="testReportArr.length == 0">
                                 <td class="text-center" colspan="5">No Records Found</td>
                             </tr>
                             <tr ng-repeat="testReport in testReportArr track by $index">

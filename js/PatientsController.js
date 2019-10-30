@@ -326,7 +326,7 @@ angular.module('patholab').controller("PatientsController", ["$scope", "$rootSco
        PatientsService.saveBillingData($scope.singleReport,$scope.singlePatientDetails).then(function(pRes) {
          if(pRes.data && pRes.data.status == "success")
          {
-            window.open("http://patholab.doctor.com/API/textReport/generatePdf/"+pRes.data.data[0], "_blank");
+            window.open("http://patholab.doctor.com/API/textReport/generatePdf/"+$rootScope.Key+"/"+pRes.data.data[0], "_blank");
          }else{
             $scope.singleReport = [];
             $scope.isAlertError = true;

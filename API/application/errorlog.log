@@ -33,3 +33,58 @@ Stack trace:
 #6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
 #7 {main}
   thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 266
+[30-Oct-2019 16:13:48 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function TextReport::generatePdf(), 0 passed in C:\xampp\htdocs\index\patholab\API\router\router.php on line 79 and exactly 1 expected in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:266
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(79): TextReport->generatePdf()
+#1 [internal function]: {closure}('generatePdf')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 266
+[30-Oct-2019 16:17:48 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function TextReport::generatePdf(), 1 passed in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103 and exactly 2 expected in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:266
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(103): TextReport->generatePdf('APKEYRBDUFFUE27...')
+#1 [internal function]: {closure}('generatePdf/APK...')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 266
+[30-Oct-2019 16:18:22 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function TextReport::generatePdf(), 1 passed in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103 and exactly 2 expected in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:266
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(103): TextReport->generatePdf('2')
+#1 [internal function]: {closure}('generatePdf/2/4')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 266
+[30-Oct-2019 16:19:20 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function TextReport::generatePdf(), 1 passed in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103 and exactly 2 expected in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:266
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(103): TextReport->generatePdf('2')
+#1 [internal function]: {closure}('generatePdf/2')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 266
+[30-Oct-2019 16:19:26 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function TextReport::generatePdf(), 1 passed in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103 and exactly 2 expected in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php:266
+Stack trace:
+#0 C:\xampp\htdocs\index\patholab\API\router\router.php(103): TextReport->generatePdf('2')
+#1 [internal function]: {closure}('generatePdf/2/4')
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#5 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 266
