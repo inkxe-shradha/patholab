@@ -1,0 +1,98 @@
+<div class="row gap-20 masonry pos-r">
+    <div class="masonry-item col-md-12">
+        <div class="bgc-white p-20 bd">
+            <h6 class="c-grey-900">Generate Your Report</h6>
+            <div class="mT-30">
+               
+                <div class="table-responsive-lg">
+                   <table class="table table-bordered">
+                       <tr>
+                           <td class="font-weight-bold text-uppercase " width="30%">Patient Name :-</td><td width="30%" class="font-italic">{{singlePatientDetails.patient_name | uppercase}}</td>
+                       </tr>
+                       
+                       <tr>
+                           <td class="font-weight-bold text-uppercase" width="30%">Patient Number :-</td><td width="30%"  class="font-italic">{{singlePatientDetails.patient_number | uppercase}}</td>
+                       </tr>
+                       <tr>
+                           <td class="font-weight-bold text-uppercase" width="30%">Patient Age :-</td><td width="30%"  class="font-italic">{{singlePatientDetails.patient_age | uppercase}}</td>
+                        </tr></td>
+                       </tr>  
+                       <tr>
+                           <td class="font-weight-bold text-uppercase" width="30%">Patient Gender :-</td><td width="30%"  class="font-italic">{{singlePatientDetails.patient_gender | uppercase}}</td>
+                        </tr></td>
+                       </tr>
+                       <tr>
+                           <td class="font-weight-bold text-uppercase" width="30%">Patient Address :-</td><td width="30%"  class="font-italic">{{singlePatientDetails.address}}</td>
+                        </tr></td>
+                       </tr>
+                    
+                   </table>
+                </div>
+
+                <div class="col-12" style='margin: 10px 0px 10px 0px;'>
+                    <label id="favoriteStateLabel">Please select the report.</label>
+                
+                    <md-autocomplete ng-disabled="isDisabled" md-no-cache="noCache" md-selected-item="selectedItem"
+                        md-search-text-change="searchTextChange(searchText)" md-search-text="searchText"
+                        md-selected-item-change="selectedItemChange(item)" md-items="item in querySearch(searchText)"
+                        md-item-text="item.display" md-min-length="0" placeholder="Ex. Shoes" input-aria-labelledby="favoriteStateLabel"
+                        input-aria-describedby="autocompleteDetailedDescription">
+                
+                        <md-item-template>
+                
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.display}}</span>
+                
+                        </md-item-template>
+                
+                        <md-not-found>
+                
+                           No Report matching.You can add the Report in <b>Report</b> Section.
+                
+                        </md-not-found>
+                
+                    </md-autocomplete>
+                </div>
+
+                <div class="row" ng-show="singleReport.length !== 0 && showProductSection">
+                    <div class="col-md-12">
+                        <div class="table-responsive-lg">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th>#SL</th>
+                                        <th>Report Name</th>
+                                        <th>Report Price</th>
+                                        <th>Report Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="report in singleReport track by $index">
+                                        <td>{{$index+1}}</td>
+                                        <td>{{report.display}}</td>
+                                        <td>{{report.price | currency:"₹":0}}</td>
+                                        <td>{{report.createdDate}}</td>
+                                        <td><button class="btn btn-link btn-sm" ng-click="removeReport($index)"><span class="icon-holder"><i class="c-deep-orange-500 fa fa-times"></i></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-left">
+                                            <b>Total: {{totalReportPrice | currency:"₹":0}}</b>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="btn-group-sm pull-right">
+                            <button class="btn btn-success btn-sm" ng-click="savePatientDetails()">Save</button>
+                            <button class="btn btn-danger btn-sm">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

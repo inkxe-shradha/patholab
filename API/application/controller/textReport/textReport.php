@@ -9,14 +9,35 @@ class TextReport extends Controller
         $this->isUserLogIn = $this->getLoginStatus();
         $this->textModel   = $this->loadmodel('textModel');
     }
-
+    
     public function getallRecord()
     {
         $result = [];
+        $arrayData = [];
+        $totalArray = [];
         if($this->isUserLogIn && $this->checkApiKey($_REQUEST['apiKey']))
         {
             $result = $this->textModel->getAllTextReport();
-            
+            if(empty($result))
+            {
+                $totalArray['data'] = [];
+            }
+            else{
+                foreach ($result as $key => $value) {
+                    # code...
+                    $arrayData[$key]['id'] = $value['id'];
+                    $arrayData[$key]['testId'] = $value['test_id'];
+                    $arrayData[$key]['testName'] = $value['test_name'];
+                    $arrayData[$key]['testPrice'] = $value['test_price'];
+                    $arrayData[$key]['patientName'] = $value['patient_name'];
+                    $arrayData[$key]['patientAge'] = $value['patient_age'];
+                    $arrayData[$key]['patientGender'] = $value['patient_gender'];
+                    $arrayData[$key]['address'] = stripslashes($value['patient_address']);
+                    $arrayData[$key]['created_date'] =  date('d-m-Y', strtotime($value['created_date']));
+                }
+                $totalArray['data'] = $arrayData;
+            }
+            $totalArray['status'] = 'Success';
         }else{
             $result['message'] = 'API Credential Failed';
         }
@@ -183,5 +204,71 @@ class TextReport extends Controller
             $result['message'] = 'API Credential Failed';
         }
         echo json_encode($result);
+    }
+
+    public function updateReport()
+    {
+        $result = [];
+        if($this->isUserLogIn && $this->checkApiKey($_REQUEST['apikey']))
+        {
+            $testName = $_REQUEST['report_name'];
+            $testId   = $_REQUEST['report_id'];
+            $testPrice = $_REQUEST['report_price'];
+            $date = date("Y/m/d");
+            $status = $this->textModel->updateTestReport($testId,$testName,$testPrice,$date);
+            if($status == "success")
+            {
+                $result['status'] =  "success";
+            }else{
+                $result['status'] =  "Failed";
+            }
+
+        } 
+         else{
+            $result['status'] = 'Failed';
+            $result['message'] = 'API Credential Failed';
+        }
+        echo json_encode($result);
+    }
+
+    public function generateBill()
+    {
+        $result = [];
+        $arrayReport = [];
+        $track = false;
+        if($this->isUserLogIn && $this->checkApiKey($_REQUEST['apikey']))
+        {
+            $arrayReport = $_REQUEST['report'];
+            $address = addslashes($_REQUEST['patient']['address']);
+            $gender = $_REQUEST['patient']['patient_gender'];
+            $age = $_REQUEST['patient']['patient_age'];
+            $number = $_REQUEST['patient']['patient_number'];
+            $name = $_REQUEST['patient']['patient_name'];
+            $patientId = $_REQUEST['patient']['id'];
+            foreach ($arrayReport as $key => $value) {
+                # code...
+               $status = $this->textModel->saveDataBill($value['display'],$value['price'],$value['testId'],$address,$gender,$age,$number,$name,$patientId);
+            }
+            if($status == "success")
+            {
+                
+                $result['status'] = 'success';
+                $result['data'] = $this->textModel->fetchSingleDetails($patientId);
+            }
+        }
+         else{
+            $result['status'] = 'Failed';
+            $result['message'] = 'API Credential Failed';
+        }
+        echo json_encode($result);
+    }
+
+    public function generatePdf($id)
+    {
+        if($this->isUserLogIn && isset($_REQUEST['apikey']) && $this->checkApiKey($_REQUEST['apikey']))
+        {
+        }else{
+            require 'application/view/warning/index.php';
+        }
     }
 }

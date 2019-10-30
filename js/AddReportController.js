@@ -13,14 +13,15 @@ angular.module('patholab').controller("AddReportController", ["$scope", "$rootSc
         createdDate : getCurrentDate()
     };
     $scope.addTestReportArry = [];
-   
+    $scope.isEditClicked = [false];
+    $scope.dataTableOpt = {
+      //custom datatable options
+      // or load data through ajax call also
+      aLengthMenu: [[10, 50, 100, -1], [10, 50, 100, "All"]]
+    };
     $scope.init = function()
     {
-        $scope.dataTableOpt = {
-        //custom datatable options
-        // or load data through ajax call also
-        aLengthMenu: [[10, 50, 100, -1], [10, 50, 100, "All"]]
-        };
+        
        if (AddReportModule.isDataSet()) {
          $scope.reportLoader = false;
          $scope.testReportFormLoader = false;
@@ -185,5 +186,57 @@ angular.module('patholab').controller("AddReportController", ["$scope", "$rootSc
          $scope.reportLoader = true;
          AddReportModule.resetData();
          AddReportService.loadAllTextData();
+    };
+
+    $scope.editReport = function(report,index) {
+      $scope.isEditClicked[index] = true;
+      $scope.reportDetails = angular.copy(report);
+    };
+
+    $scope.cancelReport = function(index){
+      $scope.testReportArr[index] = angular.copy($scope.reportDetails);
+      console.log($scope.testReportArr[index]);
+      $scope.isEditClicked[index] = false;
+    };
+
+    $scope.updateReport = function(report,index){
+      if(report.test_name !== '' && report.test_name !== undefined)
+      {
+         if (report.test_price !== undefined && report.test_price !== "" && report.test_price !== 0.00) {
+           AddReportService.updateTestReport(report).then(function(pRes) {
+             if(pRes.data.status == "success")
+             {
+               $scope.isEditClicked[index] = false;
+               $scope.reportLoader = true;
+               AddReportModule.resetData();
+               AddReportService.loadAllTextData();
+             }else{
+               $scope.isAlertError = true;
+               $scope.alertClasss = "danger";
+               $scope.alertMessage =
+                 "Failed to update record .Please try again";
+               $timeout(function() {
+                 $scope.isAlertError = false;
+               }, 2000);
+             }
+           });
+         }else{
+           $scope.isAlertError = true;
+           $scope.alertClasss = "danger";
+           $scope.alertMessage =
+             "Test report Price should not be empty OR Zero Ruppees";
+           $timeout(function() {
+             $scope.isAlertError = false;
+           }, 2000);
+           $("body").scrollTop(0);
+         }
+      }else{
+        $scope.isAlertError = true;
+        $scope.alertClasss = "danger";
+        $scope.alertMessage = "Test report name should not be empty";
+        $timeout(function() {
+          $scope.isAlertError = false;
+        }, 2000);
+      }
     };
 }]);

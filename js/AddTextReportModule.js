@@ -23,12 +23,12 @@ app.factory('AddTextReportModule', ['$rootScope', function($rootScope){
       },
       resetData = function()
       {
-         textLoadedData.pop();
+         textLoadedData = [];
       }; 
       return {
         isDataSet: isDataSet,
         setTextData: setTextData,
-        getTextData: setTextData,
-        resetData: setTextData
+        getTextData: getTextData,
+        resetData: resetData
       };
 }]);

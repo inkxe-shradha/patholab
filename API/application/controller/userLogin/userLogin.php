@@ -12,7 +12,7 @@ class UserLogin extends Controller
 
     public function index()
     {
-        echo "Index Loaded";
+        echo "<b>Index Loaded</b>";
     }
 
     public function logIn()

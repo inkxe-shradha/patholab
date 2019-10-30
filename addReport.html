@@ -44,7 +44,7 @@
                         ui-jq="dataTable" ui-options="dataTableOpt">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>#SL</th>
                                 <th>Test Name</th>
                                 <th>Test Price</th>
                                 <th>Created Date</th>
@@ -52,14 +52,38 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr ng-show="false">
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr ng-show="testReportArr.length == 0">
+                                <td class="text-center" colspan="5">No Records Found</td>
+                            </tr>
                             <tr ng-repeat="testReport in testReportArr track by $index">
                                 <td>{{$index+1}}</td>
-                                <td>{{testReport.test_name}}</td>
-                                <td>{{testReport.test_price | currency:"₹":0}}</td>
-                                <td>{{testReport.created_date}}</td>
                                 <td>
+                                    <span ng-show="!isEditClicked[$index]">{{testReport.test_name}}</span>
+                                    <div class="form-group" ng-show="isEditClicked[$index]">
+                                        <input type="text" class="form-control" ng-model="testReport.test_name" placeholder="Enter Test Name *">
+                                    </div>
+                                </td>
+                                <td>
+                                    <span ng-show="!isEditClicked[$index]">{{testReport.test_price | currency:"₹":0}}</span>
+                                    <div class="form-group" ng-show="isEditClicked[$index]">
+                                        <input type="text" class="form-control" ng-model="testReport.test_price" price placeholder="Enter Test Price *">
+                                    </div>
+                                </td>
+                                <td>{{testReport.created_date}}</td>
+                                <td ng-if="!isEditClicked[$index]">
+                                    <button class="btn btn-sm btn-success" id="deleteID" ng-click="editReport(testReport,$index)">Edit</button>
                                     <button class="btn btn-sm btn-danger" id="deleteID" ng-click="deleteReport(testReport.id)">Delete</button>
-                                    <button class="btn btn-sm btn-success" id="deleteID" ng-click="deleteUser(patient.id)">Edit</button>
+                                </td>
+                                <td ng-if="isEditClicked[$index]">
+                                    <button class="btn btn-sm btn-success" id="deleteID" ng-click="updateReport(testReport,$index)">Update</button>
+                                    <button class="btn btn-sm btn-danger" id="deleteID" ng-click="cancelReport($index)">Cancel</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -79,7 +103,7 @@
             
                         <!-- Modal body -->
                         <div class="modal-body">
-                            Are You Sure You want to Delete This Patient Record ?
+                            Are You Sure You want to Delete This Report Record ?
                         </div>
             
                         <!-- Modal footer -->

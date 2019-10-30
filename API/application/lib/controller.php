@@ -20,7 +20,7 @@ class Controller
         $this->openDatabaseConnection();
         header('Access-Control-Allow-Origin: *');
         /** Remember To change  This Commemnt Dta When Angular Tuterial Warp up*/
-        header("Content-Type: application/json; charset=UTF-8");
+        
     }
 
     /**

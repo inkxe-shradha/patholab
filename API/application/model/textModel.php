@@ -14,7 +14,7 @@ class TextModel
   public function getAllTextReport()
   {
      $attachArray = [];
-     $sql = "SELECT * FROM `test_user_data`";
+     $sql = "SELECT * FROM `relation_report`";
     
      $result = $this->db->query($sql);
 
@@ -25,8 +25,6 @@ class TextModel
              array_push($attachArray, $row);
          }
        
-     }else{
-         $attachArray['status'] = 'Failed';
      }
      return $attachArray;
   }
@@ -113,5 +111,42 @@ class TextModel
       }else{
           return 'error'.$this->db->error;
       }
+  }
+
+  public function updateTestReport($id,$tstName,$txtPrice,$date)
+  {
+      $sql = "UPDATE `report_data` SET `test_name`= '$tstName',`test_price`= '$txtPrice',`updated_date`='$date' WHERE id ='$id'";
+      $result = $this->db->query($sql);
+      if($result)
+      {
+        return 'success';
+      }else{
+        return 'error'.$this->db->error;
+      }
+  }
+
+  public function saveDataBill($reportName,$reportPrice,$reportId,$address,$gender,$age,$number,$name,$patientId)
+  {
+      $sql = "INSERT INTO `relation_report`(`patient_id`, `report_name`, `report_price`) VALUES ('$patientId','$reportName','$reportPrice')";
+      $result = $this->db->query($sql);
+      if($result)
+      {
+        return 'success';
+      }else{
+        return 'error'.$this->db->error;
+      }
+  }
+
+  public function fetchSingleDetails($id)
+  {
+      $sql = "SELECT * FROM `patient_data` WHERE id = $id";
+      $result = $this->db->query($sql);
+      $row=[];
+      if($result->num_rows > 0)
+      {
+        $row = $result->fetch_row();
+    
+      }
+      return $row;
   }
 }

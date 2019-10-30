@@ -23,7 +23,7 @@
             <div class="container" ng-show="isAlertError">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="alert alert-{{alertClasss}}">
+                        <div class="alert alert-{{alertClasss}} text-center" style="position: fixed;z-index: 99999999; top:15%;width: 100%;left: 0;">
                             {{alertMessage}}
                         </div>
                     </div>
@@ -85,7 +85,10 @@
                                     <td>{{patient.patient_gender}}</td>
                                     <td>{{patient.address}}</td>
                                     <td>{{patient.created_date}}</td>
-                                    <td><button class="btn btn-sm btn-danger" id="deleteID" ng-click="deleteUser(patient.id)">Delete</button></td>
+                                    <td>
+                                        <button class="btn btn-success btn-sm" ng-click="generateBill(patient)">Billing</button>
+                                        <button class="btn btn-sm btn-danger" id="deleteID" ng-click="deleteUser(patient.id)">Delete</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -148,6 +151,7 @@
                     </div>
                 </div>
             </div>
+            <ng-include src="'addBilling.html'" ng-if="isBillingClicked"></ng-include>
         </div>
     </main>
     <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright © 2017 Designed by <a

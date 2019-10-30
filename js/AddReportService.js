@@ -31,15 +31,37 @@ app.factory('AddReportService', ["$http", "$rootScope","AddReportModule", functi
          });
          return _response;
        },
-       deleteTestData = function(id){
+       deleteTestData = function(id) {
          var _response = $http.get(
-           rootUrl + "textReport/deleteTestData?apiKey=" + key + "&test_id="+id
+           rootUrl +
+             "textReport/deleteTestData?apiKey=" +
+             key +
+             "&test_id=" +
+             id
          );
          return _response;
-       }; 
+       },
+       updateTestReport = function(report) {
+         var _params = $.param({
+           apikey: key,
+           report_id: report.id,
+           report_name: report.test_name,
+           report_price: report.test_price
+         });
+         var _response = $http({
+           method: "POST",
+           url: rootUrl + "textReport/updateReport",
+           headers: {
+             "Content-Type": "application/x-www-form-urlencoded"
+           },
+           data: _params
+         });
+         return _response;
+       };
        return {
          loadAllTextData: loadAllTextData,
          saveAllReportData: saveAllReportData,
-         deleteTestData: deleteTestData
+         deleteTestData: deleteTestData,
+         updateTestReport: updateTestReport
        };
 }]);
