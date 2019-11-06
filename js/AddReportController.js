@@ -19,6 +19,9 @@ angular.module('patholab').controller("AddReportController", ["$scope", "$rootSc
       // or load data through ajax call also
       aLengthMenu: [[10, 50, 100, -1], [10, 50, 100, "All"]]
     };
+    $(document).ready(function() {
+      $("#myTable").DataTable();
+    });
     $scope.init = function()
     {
         

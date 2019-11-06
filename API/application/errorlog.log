@@ -88,3 +88,292 @@ Stack trace:
 #6 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
 #7 {main}
   thrown in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 266
+[31-Oct-2019 04:02:47 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\view\generatePdf\index.php on line 81
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:04:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:12:13 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:25 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[01-Nov-2019 19:22:42 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:32:05 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 07:34:03 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 15:49:07 Europe/Berlin] PHP Notice:  Undefined offset: 69 in C:\xampp\htdocs\index\patholab\API\application\view\generatePdf\index.php on line 195
+[02-Nov-2019 15:54:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TextReport::asset() in C:\xampp\htdocs\index\patholab\API\router\router.php:103
+Stack trace:
+#0 [internal function]: {closure}('asset/demo-imag...')
+#1 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#4 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#5 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103
+[02-Nov-2019 15:55:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TextReport::asset() in C:\xampp\htdocs\index\patholab\API\router\router.php:103
+Stack trace:
+#0 [internal function]: {closure}('asset/demo-imag...')
+#1 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#4 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#5 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103
+[02-Nov-2019 15:55:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TextReport::asset() in C:\xampp\htdocs\index\patholab\API\router\router.php:103
+Stack trace:
+#0 [internal function]: {closure}('asset/demo-imag...')
+#1 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#4 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#5 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103
+[02-Nov-2019 15:55:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TextReport::asset() in C:\xampp\htdocs\index\patholab\API\router\router.php:103
+Stack trace:
+#0 [internal function]: {closure}('asset/demo-imag...')
+#1 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#4 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#5 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103
+[02-Nov-2019 15:55:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TextReport::asset() in C:\xampp\htdocs\index\patholab\API\router\router.php:103
+Stack trace:
+#0 [internal function]: {closure}('asset/demo-imag...')
+#1 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#4 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#5 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103
+[02-Nov-2019 15:55:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method TextReport::asset() in C:\xampp\htdocs\index\patholab\API\router\router.php:103
+Stack trace:
+#0 [internal function]: {closure}('asset/demo-imag...')
+#1 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(382): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(365): Inkxe\Router\Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\index\patholab\API\router\parent\router.php(290): Inkxe\Router\Router->handle(Array, true)
+#4 C:\xampp\htdocs\index\patholab\API\router\router.php(108): Inkxe\Router\Router->run()
+#5 C:\xampp\htdocs\index\patholab\API\index.php(13): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\index\patholab\API\router\router.php on line 103
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: test_id in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 29
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: test_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 30
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: test_price in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 31
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_name in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 32
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_age in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 33
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_gender in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 34
+[02-Nov-2019 16:57:06 Europe/Berlin] PHP Notice:  Undefined index: patient_address in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 35
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined index: report in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 241
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 242
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 243
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 244
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 245
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 246
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 247
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 251
+[02-Nov-2019 17:31:05 Europe/Berlin] PHP Notice:  Undefined variable: status in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 259
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined index: report in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 241
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 242
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 243
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 244
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 245
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 246
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 247
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 251
+[02-Nov-2019 17:31:17 Europe/Berlin] PHP Notice:  Undefined variable: status in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 259
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined index: report in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 241
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 242
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 243
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 244
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 245
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 246
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 247
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 251
+[02-Nov-2019 17:32:25 Europe/Berlin] PHP Notice:  Undefined variable: status in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 259
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined index: report in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 241
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 242
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 243
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 244
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 245
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 246
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 247
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 251
+[02-Nov-2019 17:33:56 Europe/Berlin] PHP Notice:  Undefined variable: status in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 259
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined index: report in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 241
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 242
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 243
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 244
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 245
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 246
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined index: patient in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 247
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 251
+[02-Nov-2019 17:36:25 Europe/Berlin] PHP Notice:  Undefined variable: status in C:\xampp\htdocs\index\patholab\API\application\controller\textReport\textReport.php on line 259

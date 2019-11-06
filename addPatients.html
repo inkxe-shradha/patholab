@@ -62,8 +62,7 @@
                         <h2 class="text-center">Patient's Entered List</h2>
                     </div>
                     <div class="panel-body">
-                        <table class="table table-bordered bordered table-striped table-condensed datatable"
-                            ui-jq="dataTable" ui-options="dataTableOpt">
+                        <table class="table table-bordered bordered table-striped table-condensed datatable" datatable="ng" dt-options="dtOptions" dt-column-defs="dtColumnDefs">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -71,13 +70,13 @@
                                     <th>Number</th>
                                     <th>Age</th>
                                     <th>Gender</th>
-                                    <th>Address</th>
+                                    <th width="40%">Address</th>
                                     <th>Created Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="patient in patienArray">
+                                <tr ng-repeat="patient in patienArray" repeat-done="initDataTable">
                                     <td>{{$index+1}}</td>
                                     <td>{{patient.patient_name}}</td>
                                     <td>{{patient.patient_number}}</td>
@@ -145,7 +144,7 @@
                                         <span class="text-danger" data-ng-show="patientForm.patientAddress.$error.required && patientForm.patientAddress.$touched && patientForm.patientAddress.$dirty">Please enter the Address</span>
                                     </div>
                                 </div>
-                                <button  class="btn btn-primary" ng-disabled="patientForm.$invalid && !patientObject.gender" ng-click="savePatientDetails(patientObject)">Save</button>
+                                <button  class="btn btn-primary" ng-disabled="patientForm.$invalid || !patientObject.gender" ng-click="sendPatientDetails(patientObject)">Save</button>
                             </form>
                         </div>
                     </div>

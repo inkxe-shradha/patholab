@@ -6,8 +6,8 @@ var app = angular
     "ngMaterial",
     "ngMessages",
     "angular-loading-bar",
+    "datatables",
     "ui.bootstrap",
-    "ui.utils"
   ])
   .config([
     "$routeProvider",
@@ -356,6 +356,14 @@ var app = angular
       };
     });
     app.directive("compareTo", compareTo);
+
+    app.directive('repeatDone', function() {
+    return function(scope, element, attrs) {
+          if (scope.$last) { // all are rendered
+              scope.$eval(attrs.repeatDone);
+          }
+        }
+    });
 
     //Used the User Module
     document.write('<script type="text/javascript" src="js/UserModule.js"></script>');

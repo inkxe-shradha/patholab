@@ -14,7 +14,7 @@ class TextModel
   public function getAllTextReport()
   {
      $attachArray = [];
-     $sql = "SELECT * FROM `relation_report`";
+     $sql = "SELECT * FROM `text_details_report`";
     
      $result = $this->db->query($sql);
 
@@ -137,6 +137,19 @@ class TextModel
       }
   }
 
+  public function clearRelationalRecord($id){
+      $sql = "DELETE FROM `relation_report` WHERE patient_id = $id ";
+      $sqlRe = "DELETE FROM `text_details_report` WHERE patient_id = $id ";
+      $result = $this->db->query($sql);
+      if($result)
+      {
+          $this->db->query($sqlRe);
+          return true;
+      }else{
+          return 'error'.$this->db->error;
+      }
+  }
+
   public function fetchSingleDetails($id)
   {
       $sql = "SELECT * FROM `patient_data` WHERE id = $id";
@@ -172,11 +185,17 @@ class TextModel
       $result = $this->db->query($sql);
       if($result->num_rows > 0)
       {
-        while($row = $result->fetch_assoc())
-        {
-            array_push($attachArray, $row);
-        }
+        $row = $result->fetch_assoc();
       }
-      return $attachArray;
+      return $row;
+  }
+
+  public function insertAllReport($schema)
+  {
+      $result = $this->db->query($schema);
+      if($result == false)
+      {
+        echo 'error'.$this->db->error;
+      }
   }
 }

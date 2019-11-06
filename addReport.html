@@ -40,8 +40,7 @@
                     <h2 class="text-center">Test Report Entered List</h2>
                 </div>
                 <div class="panel-body">
-                    <table class="table table-bordered bordered table-striped table-condensed datatable"
-                        ui-jq="dataTable" ui-options="dataTableOpt">
+                    <table class="table table-bordered bordered table-striped table-condensed datatable" id="myTable">
                         <thead>
                             <tr>
                                 <th>#SL</th>
@@ -58,9 +57,6 @@
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                            </tr>
-                            <tr ng-if="testReportArr.length == 0">
-                                <td class="text-center" colspan="5">No Records Found</td>
                             </tr>
                             <tr ng-repeat="testReport in testReportArr track by $index">
                                 <td>{{$index+1}}</td>

@@ -4,7 +4,7 @@ app.factory('AddTextReportService', ["$http", "$rootScope","AddTextReportModule"
          loadAllTextData = function()
          {
            $http.get(rootUrl+'textReport/getallRecord?apiKey='+key).then(function(pRes) {
-            if(pRes.data && pRes.data.status == "Failed")
+            if(pRes.data)
             {
               AddTextReportModule.setTextData(pRes.data);
             }else{

@@ -1,24 +1,25 @@
-angular.module('patholab').controller("AddTextReportController", ["$scope", "$rootScope", "$http", "$interval", "$location", "$routeParams", "$timeout","UserModule","AddTextReportModule","AddTextReportService", function($scope, $rootScope, $http, $interval, $location, $routeParams, $timeout,UserModule,AddTextReportModule,AddTextReportService){
+angular.module('patholab').controller("AddTextReportController", ["$scope", "$rootScope", "$http", "$interval", "$location", "$routeParams", "$timeout","UserModule","AddTextReportModule","AddTextReportService","DTOptionsBuilder","DTColumnDefBuilder","DTColumnBuilder", function($scope, $rootScope, $http, $interval, $location, $routeParams, $timeout,UserModule,AddTextReportModule,AddTextReportService,DTOptionsBuilder,DTColumnDefBuilder,DTColumnBuilder){
     $scope.isAddTextReportClicked = false; 
+     $scope.dtOptions = DTOptionsBuilder.newOptions()
+       .withOption("#", [1, "asc"])
+       .withOption("lengthMenu", [5, 10, 20, 40, 80, 160])
+       .withPaginationType("full_numbers")
+       .withDOM("pitrfl");
     $scope.addtextLoader = true; 
-    $scope.dataTableOpt = {
-    //custom datatable options 
-    // or load data through ajax call also
-    "aLengthMenu": [[10, 50, 100,-1], [10, 50, 100,'All']],
-    };
+    $scope.reportArray = [];
+   
     $scope.init = function()
     {
-        if(AddTextReportModule.isDataSet())
-        {
-
-        }else{
-            AddTextReportService.loadAllTextData();
-        }
+        AddTextReportService.loadAllTextData();
     };
 
     $rootScope.$on("TEXTDATA_LOADED_EVENT",function(event,data){
         $scope.addtextLoader = false; 
         $scope.isAddTextReportClicked = true; 
-        console.log(data);
+        $scope.reportArray = data; 
     });
+
+    $scope.viewReport = function(id){
+        window.open("http://patholab.doctor.com/API/textReport/generatePdf/"+$rootScope.Key+"/"+id , "_blank");
+    };
 }]);

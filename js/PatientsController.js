@@ -1,4 +1,4 @@
-angular.module('patholab').controller("PatientsController", ["$scope", "$rootScope", "$http", "$interval", "$location", "$routeParams", "$timeout","UserModule","PatientsModule","PatientsService", function($scope, $rootScope, $http, $interval, $location, $routeParams, $timeout,UserModule,PatientsModule,PatientsService){
+angular.module('patholab').controller("PatientsController", ["$scope", "$rootScope", "$http", "$interval", "$location", "$routeParams", "$timeout","UserModule","PatientsModule","PatientsService","DTOptionsBuilder","DTColumnDefBuilder","DTColumnBuilder" , function($scope, $rootScope, $http, $interval, $location, $routeParams, $timeout,UserModule,PatientsModule,PatientsService,DTOptionsBuilder,DTColumnDefBuilder,DTColumnBuilder){
     $scope.isPatientClicked = false; 
     $scope.patientsLoader   = true; 
     $scope.patientTabelShow = true;
@@ -16,16 +16,17 @@ angular.module('patholab').controller("PatientsController", ["$scope", "$rootSco
     $scope.patienArray = [];
     $scope.isBillingClicked = false;
     $scope.testReportArray = [];
-    $scope.dataTableOpt = {
-    //custom datatable options 
-    // or load data through ajax call also
-    "aLengthMenu": [[10, 50, 100,-1], [10, 50, 100,'All']],
-    };
+    $scope.dtOptions = DTOptionsBuilder.newOptions()
+        .withOption("#", [1, "asc"])
+        .withOption("lengthMenu", [5, 10, 20, 40, 80, 160])
+        .withPaginationType("full_numbers")
+        .withDOM("pitrfl");
+
     $scope.showProductSection = false;
     $scope.singleReport = []; 
     $scope.singlePatientDetails = {};
     $scope.totalReportPrice = 0;
-
+   
     $scope.init = function()
     {
         if (PatientsModule.isDataSet()) {
@@ -82,35 +83,33 @@ angular.module('patholab').controller("PatientsController", ["$scope", "$rootSco
         PatientsService.loadAllTextData();
     }; 
 
-    $scope.savePatientDetails = function(patient)
-    {
-        $scope.patientFormLoader = true;
-        PatientsService.sendPatientData(patient).then(function(pRes){
-           if(pRes.data.status = "success")
-           {
-                $scope.patientFormLoader = false;
-                $scope.patientObject = {
-                  pateintName: "",
-                  patientNumber: "",
-                  patientAge: "",
-                  gender: "",
-                  address: ""
-                };
-                $scope.patientForm.$setPristine();
-                $scope.patientForm.$setValidity();
-                $scope.patientsLoader = true; 
-                $scope.patientTabelShow = true;
-                $scope.isPatientClicked = false; 
-                PatientsService.loadAllTextData();
-           }else{
-               $scope.isAlertError = true;
-               $scope.alertClasss = "danger";
-               $scope.alertMessage = "Failed to Insert Data";
-               $timeout(function(){
-                   $scope.isAlertError = false;
-               });
-           }
-        });
+    $scope.sendPatientDetails = function(patient) {
+      $scope.patientFormLoader = true;
+      PatientsService.sendPatientData(patient).then(function(pRes) {
+        if ((pRes.data.status = "success")) {
+          $scope.patientFormLoader = false;
+          $scope.patientObject = {
+            pateintName: "",
+            patientNumber: "",
+            patientAge: "",
+            gender: "",
+            address: ""
+          };
+          $scope.patientForm.$setPristine();
+          $scope.patientForm.$setValidity();
+          $scope.patientsLoader = true;
+          $scope.patientTabelShow = true;
+          $scope.isPatientClicked = false;
+          PatientsService.loadAllTextData();
+        } else {
+          $scope.isAlertError = true;
+          $scope.alertClasss = "danger";
+          $scope.alertMessage = "Failed to Insert Data";
+          $timeout(function() {
+            $scope.isAlertError = false;
+          });
+        }
+      });
     };
 
     $scope.deleteUser = function(patientId)

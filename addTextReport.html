@@ -11,29 +11,33 @@
                             Add Test Report
                         </h2>
                     </div>
-                    <div class="panel-body" ng-if="!addtextLoader">
-                        <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable"
-                            ui-options="dataTableOpt">
+                    <div class="panel-body">
+                        <table class="table table-bordered bordered table-striped table-condensed datatable" id="textReportTable" datatable="ng" dt-options="dtOptions" dt-column-defs="dtColumnDefs">
                             <thead>
                                 <tr>
                                     <th>#SL</th>
-                                    <th>Test Name</th>
-                                    <th>Test Price</th>
                                     <th>Patient Name</th>
-                                    <th>Age</th>
-                                    <th>Address</th>
-                                    <th>Gender</th>
+                                    <th>Patient Age</th>
+                                    <th>Patient Gender</th>
+                                    <th>Patient Address</th>
+                                    <th>Test Price</th>
                                     <th>Created Date</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="n in reportArray">
                                     <td>{{$index+1}}</td>
-                                    <td>{{n[0]}}</td>
-                                    <td>{{n[1]}}</td>
-                                    <td>{{n[2]}}</td>
-                                    <td>{{n[3]}}</td>
-                                    <td>{{n[4] | date:'dd/MM/yyyy'}}</td>
+                                    <td>{{n.name}}</td>
+                                    <td>{{n.age}}</td>
+                                    <td>{{n.gender}}</td>
+                                    <td width="30%">{{n.address}}</td>
+                                    <td>{{n.total_report_price | currency:"₹":0}}</td>
+                                    <td>{{n.created_date}}</td>
+                                    <td><button class="btn btn-link"><span class="icon-holder" ng-click='viewReport(n.patient_id)'><i class="c-teal-500 fa fa-file-pdf-o"></i></span></button>
+                                    <!-- <button class="btn btn-link"><span class="icon-holder"><i
+                                                class="c-deep-orange-500 fa fa-times" ng-click="deleteReport(n.patient_id)"></i></span></button> -->
+                                            </td>
                                 </tr>
                             </tbody>
                         </table>

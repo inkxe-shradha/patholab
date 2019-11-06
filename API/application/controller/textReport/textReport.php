@@ -26,13 +26,13 @@ class TextReport extends Controller
                 foreach ($result as $key => $value) {
                     # code...
                     $arrayData[$key]['id'] = $value['id'];
-                    $arrayData[$key]['testId'] = $value['test_id'];
-                    $arrayData[$key]['testName'] = $value['test_name'];
-                    $arrayData[$key]['testPrice'] = $value['test_price'];
-                    $arrayData[$key]['patientName'] = $value['patient_name'];
-                    $arrayData[$key]['patientAge'] = $value['patient_age'];
-                    $arrayData[$key]['patientGender'] = $value['patient_gender'];
-                    $arrayData[$key]['address'] = stripslashes($value['patient_address']);
+                    $arrayData[$key]['testId'] = $value['report_id'];
+                    $arrayData[$key]['patientId'] = $value['patient_id'];
+                    $arrayData[$key]['name'] = $value['name'];
+                    $arrayData[$key]['age'] = $value['age'];  
+                    $arrayData[$key]['gender'] = $value['gender'];
+                    $arrayData[$key]['address'] = stripslashes($value['address']);
+                    $arrayData[$key]['price'] = $value['total_report_price'];
                     $arrayData[$key]['created_date'] =  date('d-m-Y', strtotime($value['created_date']));
                 }
                 $totalArray['data'] = $arrayData;
@@ -245,9 +245,16 @@ class TextReport extends Controller
             $number = $_REQUEST['patient']['patient_number'];
             $name = $_REQUEST['patient']['patient_name'];
             $patientId = $_REQUEST['patient']['id'];
-            foreach ($arrayReport as $key => $value) {
-                # code...
-               $status = $this->textModel->saveDataBill($value['display'],$value['price'],$value['testId'],$address,$gender,$age,$number,$name,$patientId);
+            $deletePreviousRecord = $this->textModel->clearRelationalRecord($patientId);
+            if($deletePreviousRecord)
+            {
+                foreach ($arrayReport as $key => $value) {
+                    # code...
+                $status = $this->textModel->saveDataBill($value['display'],$value['price'],$value['testId'],$address,$gender,$age,$number,$name,$patientId);
+                }
+            }
+            else {
+                $status == "failed";
             }
             if($status == "success")
             {
