@@ -32,7 +32,9 @@
                 background-image: url('http://patholab.doctor.com/API/asset/img/logo.jpeg');
             background-repeat: no-repeat;
             background-position: center center;
+            background-size:contain !important;
             height: 302px;
+            -webkit-print-color-adjust: exact !important;
             }
 
             #background{
@@ -125,10 +127,11 @@
             text-align: center;
             color: #0c0c0cf2;
             font-family: 'Aladin';
-            background-image: url('http://patholab.doctor.com/API/asset/img/logo.jpeg');
+            background-image: url('http://patholab.doctor.com/API/asset/img/logo.png');
             background-repeat: no-repeat;
             background-position: center center;
-            height: 302px;
+            background-size:cover;
+            height: 250px;
         }
 
         h2 {
@@ -240,9 +243,7 @@
                 <td>Age : <b><?php echo $patientDetails['patient_age'];?></b></td>
                 <td>Gender : <b><?php echo $patientDetails['patient_gender'];?></b></td>
             </tr>
-            <tr>
-                <td colspan="3">Address : <b><?php echo stripslashes($patientDetails['address']);?></b></td>
-            </tr>
+            
         </table>
         <table >
             <thead>
@@ -322,7 +323,7 @@
     </div>
 
     <footer>
-        <p>Invoice was created on a computer and is valid without the signature and seal.<br>Billing software designed by softech18(9937857561) www.softech18.com</p>
+        <p>Billing software designed by softech18(9937857561) www.softech18.com</p>
     </footer>
     <script src="http://patholab.doctor.com/js/jquery.mini.js"></script>
     <script>

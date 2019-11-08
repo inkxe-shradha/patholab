@@ -70,7 +70,6 @@
                                     <th>Number</th>
                                     <th>Age</th>
                                     <th>Gender</th>
-                                    <th width="40%">Address</th>
                                     <th>Created Date</th>
                                     <th>Action</th>
                                 </tr>
@@ -82,7 +81,6 @@
                                     <td>{{patient.patient_number}}</td>
                                     <td>{{patient.patient_age}}</td>
                                     <td>{{patient.patient_gender}}</td>
-                                    <td>{{patient.address}}</td>
                                     <td>{{patient.created_date}}</td>
                                     <td>
                                         <button class="btn btn-success btn-sm" ng-click="generateBill(patient)">Billing</button>
@@ -109,8 +107,7 @@
                                     <div class="form-group col-md-6"><label for="number">Patient Number <span class="text-danger bold">*</span></label></label><input
                                             type="text" class="form-control" ng-class="(patientForm.userPhoneNumber.$error.minlength || patientForm.userPhoneNumber.$error.maxlength) || patientForm.userPhoneNumber.$error.required && patientForm.userPhoneNumber.$touched && patientForm.userPhoneNumber.$dirty
                                              ? 'is-invalid' : ''" ng-model="patientObject.patientNumber" id="number" name="userPhoneNumber" 
-                                            placeholder="Enter the phone number" valid-number no-float ng-minlength="10" ng-maxlength="10" required>
-                                             <span class="text-danger" data-ng-show="patientForm.userPhoneNumber.$error.required && patientForm.userPhoneNumber.$touched && patientForm.userPhoneNumber.$dirty">Enter the phone number!</span>
+                                            placeholder="Enter the phone number" valid-number no-float ng-minlength="10" ng-maxlength="10">
                                             <span class="text-danger"  data-ng-show="patientForm.userPhoneNumber.$error.minlength || patientForm.userPhoneNumber.$error.maxlength">Phone number must be 10 digit.</span>
                                         </div>
                                 </div>
@@ -122,7 +119,7 @@
                                     </div>
                                     <div class="col-6">
                                         <div style="margin: 35px 0px 0px 0px ;text-align: center;">
-                                            <div class="custom-control custom-radio custom-control-inline"><b style="font-size: 15px;">Gender <span class="text-danger bold">*</span></label></b></div>
+                                            <div class="custom-control custom-radio custom-control-inline"><b style="font-size: 15px;">Gender <span class="text-danger bold"></span></label></b></div>
                                             <!-- Default inline 1-->
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" class="custom-control-input" id="Male"  ng-model="patientObject.gender" ng-value="true" checked name="Gender" >
@@ -138,13 +135,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-row">
+                                <!-- <div class="form-row">
                                     <div class="form-group col-md-12"><label for="address">Address <span class="text-danger bold">*</span></label></label>
                                         <textarea  class="form-control" for="address" ng-class="patientForm.patientAddress.$error.required && patientForm.patientAddress.$touched && patientForm.patientAddress.$dirty ? 'is-invalid' : ''" name="patientAddress" ng-model="patientObject.address" required placeholder="Enter the  Address"></textarea>
                                         <span class="text-danger" data-ng-show="patientForm.patientAddress.$error.required && patientForm.patientAddress.$touched && patientForm.patientAddress.$dirty">Please enter the Address</span>
                                     </div>
-                                </div>
-                                <button  class="btn btn-primary" ng-disabled="patientForm.$invalid || !patientObject.gender" ng-click="sendPatientDetails(patientObject)">Save</button>
+                                </div> -->
+                                <button  class="btn btn-primary" ng-disabled="patientForm.userName.$error.required || patientForm.patientAge.$error.required" ng-click="sendPatientDetails(patientObject)">Save</button>
                             </form>
                         </div>
                     </div>
