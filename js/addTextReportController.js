@@ -22,4 +22,5 @@ angular.module('patholab').controller("AddTextReportController", ["$scope", "$ro
     $scope.viewReport = function(id){
         window.open("http://patholab.doctor.com/API/textReport/generatePdf/"+$rootScope.Key+"/"+id , "_blank");
     };
+    
 }]);

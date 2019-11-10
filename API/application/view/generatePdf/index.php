@@ -13,17 +13,15 @@
             * {
                 box-sizing: border-box;
                 -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
-    color-adjust: exact !important;   
+                color-adjust: exact !important;   
             }
-
-            body {
-                margin: 0px 15% !important;
+             body {
+                margin: 0px !important;
                 font-family: Arial, Helvetica, sans-serif;
             }
 
             /* Style the header */
             header {
-                background-color: #159ec7e3;
                 padding: 10px;
                 text-align: center;
                 color: #0c0c0cf2;
@@ -49,11 +47,10 @@
         #bg-text
         {
             color:lightgrey;
-            font-size:120px;
             /* transform:rotate(300deg);
             -webkit-transform:rotate(300deg); */
             width:100%;
-            min-width: 260px;
+            min-width: 220px;
             min-height:200px;
             text-align: center;
             background-image:url('http://patholab.doctor.com/API/asset/img/demo-image.png');
@@ -122,7 +119,6 @@
 
         /* Style the header */
         header {
-            background-color: #159ec7e3;
             padding: 10px;
             text-align: center;
             color: #0c0c0cf2;
@@ -159,7 +155,7 @@
             padding: 2px;
             text-align: center;
             color: black;
-            font-family: 'Aladin';
+             font-family: 'Aladin' !important;
              z-index: 10001;
             position: relative;
         }
@@ -189,9 +185,6 @@
         #bg-text
         {
             color:lightgrey;
-            font-size:120px;
-            /* transform:rotate(300deg);
-            -webkit-transform:rotate(300deg); */
             width:100%;
             min-width: 260px;
             min-height:200px;
@@ -199,7 +192,7 @@
             background-image:url('http://patholab.doctor.com/API/asset/img/watermark.jpeg');
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: 240px 200px;
+            background-size: 220px 200px;
         }
         #content{
             z-index: 10001;
@@ -235,13 +228,13 @@
 
         <table>
             <tr>
-                <td>Name: <b><?php echo $patientDetails['patient_name'];?></b></td>
-                <td>Number: <b><?php echo $patientDetails['patient_number'];?></b></td>
-                <td rowspan="2">Date: <?php echo date('d/m/Y') ?></td>
+                <td width="30%">Name: <b><?php echo $patientDetails['patient_name'];?></b></td>
+                <td width="40%">Number: <b><?php echo $patientDetails['patient_number'];?></b></td>
+                <td width="30%" rowspan="2">Date: <?php echo date('d/m/Y') ?></td>
             </tr>
             <tr>
-                <td>Age : <b><?php echo $patientDetails['patient_age'];?></b></td>
-                <td>Gender : <b><?php echo $patientDetails['patient_gender'];?></b></td>
+                <td width="30%">Age : <b><?php echo $patientDetails['patient_age'];?></b></td>
+                <td width="40%">Gender : <b><?php echo $patientDetails['patient_gender'];?></b></td>
             </tr>
             
         </table>
