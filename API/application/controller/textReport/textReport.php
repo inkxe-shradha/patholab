@@ -275,6 +275,11 @@ class TextReport extends Controller
         if($this->isUserLogIn && isset($apiKey) && $this->checkApiKey($apiKey))
         {
             $reportArray = $this->textModel->getAllReports($id);
+             $count = 0;
+                  foreach ($reportArray as $key => $value) {
+                      
+                      $count = $count + $key;
+                  }
             $patientDetails  = $this->textModel->getAllTestReport($id);
             require 'application/view/generatePdf/index.php';
         }else{

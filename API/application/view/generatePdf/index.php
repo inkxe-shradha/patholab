@@ -283,14 +283,13 @@
                     $paise = ($decimal > 0) ? " And <b>" . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' </b>Paise' : '';
                     return ($Rupees ? $Rupees . 'Rupees ' : '') . $paise;
                 }
-    
                   foreach ($reportArray as $key => $value) {
                       # code...
                       $reportId = $value['patient_id'];
                       
                ?>
-                <tr>
-                    <td><?php echo $value['report_name'] ?></td>
+                <tr style="height:<?php if($count >= 0 && $count <= 1) { echo "200px";} else{ echo "auto";} ?>">
+                    <td><?php echo $value['report_name'];?></td>
                     <td></td>
                     <td style="text-align:center"><?php echo $value['report_price'] ?></td>
                 </tr>
